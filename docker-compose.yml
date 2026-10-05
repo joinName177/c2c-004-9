@@ -1,0 +1,5 @@
+services:
+  luggage-planner:
+    build: .
+    ports:
+      - "8104:80"
