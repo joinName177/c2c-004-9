@@ -48,6 +48,17 @@ export interface PackingSnapshot {
   selectedPlan: PlanMode;
 }
 
+export interface PlanOutcome {
+  plan: PackingPlan;
+  risks: Risk[];
+}
+
+export interface CalcResult {
+  suitcase: Suitcase;
+  items: PackingItem[];
+  plans: Record<PlanMode, PlanOutcome>;
+}
+
 export function itemVolume(item: Dimensions): number {
   return item.length * item.width * item.height;
 }
